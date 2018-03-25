@@ -9,13 +9,13 @@ export function handler(event, context, callback) {
 
   axios.get(`https://www.eventbriteapi.com/v3/events/search/?token=${key}&start_date.keyword=today&sort_by=best&q=${event.body}`)
     .then(resp => {
-      console.log(resp.data);
+      console.log(resp.data.events);
       info = resp.data.events.map(item => {
-        if (item.logo.original.url) {
+        if (item.logo) {
           return(
             {"Name":`${item.name.text}`,
             "Description":`${item.description.text}`,
-            "image_url":`${item.logo.original.url}`}
+            "image_url":`${item.logo.url}`}
           );          
         } else {
           return(
