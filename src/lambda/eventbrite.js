@@ -12,7 +12,7 @@ export function handler(event, context, callback) {
       console.log(info);
       callback(null, {
         statusCode: 200,
-        body: JSON.stringify({msg: info})
+        body: JSON.stringify({ msg: info })
       });
     });
 
