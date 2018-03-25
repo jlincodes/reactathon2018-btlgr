@@ -27,24 +27,25 @@ export function handler(event, context, callback) {
 
 
       let requestOptions = {
-          "method": "POST",
-          "headers": {
-              "Content-Type": "application/json"
-          }
+        "method": "POST",
+        "headers": {
+            "Content-Type": "application/json"
+        }
       }
 
-      axios.post(`https://data.annihilate87.hasura-app.io/v1/query`, data, requestOptions).then(resp => {
-        info = resp
+      axios.post(`https://data.annihilate87.hasura-app.io/v1/query`, data, requestOptions)
+        .then(resp => {
+          
+          callback(null, {
+            statusCode: 200,
+            body: JSON.stringify(resp)
+          });
 
-        callback(null, {
-          statusCode: 200,
-          body: JSON.stringify(data)
-        });
-
-      }).catch(err => {
-        console.log('^&$&%^$&^%$&%^$&%^$&^%$&^%$&^%$&^%$&^%$&%^$');
-        console.log(err);
-      })
+        }).catch(err => {
+          console.log('^&$&%^$&^%$&%^$&%^$&^%$&^%$&^%$&^%$&^%$&%^$');
+          console.log(err);
+        }
+      )
     }
   )
 }
