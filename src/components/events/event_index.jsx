@@ -10,12 +10,9 @@ export default class EventList extends React.Component {
       events: [],
       extra: "karaoke"
     };
-    this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick(e) {
-    e.preventDefault();
-
+  componentDidMount() {
     this.setState({ loading: true, events: [] });
     // fetch('/.netlify/functions/eventbrite')
       fetch('/.netlify/functions/eventbrite', { method: 'post', body: this.state.extra })
@@ -35,15 +32,10 @@ export default class EventList extends React.Component {
       <EventListItem
         key={idx}
         event={event} />
-    )) : <span>Click the button to discover events happening right now.</span>;
+    )) : <span>Loading Events...</span>;
 
     return (
       <div>
-        <button
-          className="discover-button"
-          onClick={this.handleClick}>
-          { loading ? 'Loading...' : 'Discover' }
-        </button>
         <ul className="event-list">
           {eventItems}
         </ul>
