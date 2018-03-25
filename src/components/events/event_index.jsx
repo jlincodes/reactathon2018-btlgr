@@ -9,7 +9,6 @@ export default class EventList extends React.Component {
       loading: false,
       events: []
     };
-    // this.handleClick = this.handleClick.bind(this);
   }
 
   componentDidMount() {
