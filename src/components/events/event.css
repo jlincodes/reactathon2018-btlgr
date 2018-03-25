@@ -12,12 +12,16 @@
 .event-item {
   border: 1px solid grey;
   width: 300px;
-  height: 100px;
+  height: 300px;
   text-align: center;
   padding: 30px;
   margin: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-
+  flex-direction: column;
+}
+.event-item img {
+  width: 300px;
+  /*height: 100px;*/
 }

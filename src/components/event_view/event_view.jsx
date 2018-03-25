@@ -25,11 +25,14 @@ class EventView extends React.Component {
     if (this.state && this.state.session_id) {
       const eventName = this.state.Name;
       const eventDesc = this.state.Description;
+      const eventImage = this.state.image_url;
       const token = this.state.token;
       const sessId = this.state.session_id;
 
       return (
         <div>
+          <img src={`${eventImage}`}></img>
+
           <h1>{eventName}</h1>
           <div>
             <StreamIndex />
