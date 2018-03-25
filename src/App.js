@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import EventIndex from './components/events/event_index';
+import Splash from './components/splash/splash';
 
 import './App.css';
 
@@ -32,8 +34,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        Church
-        <LambdaDemo/>
+        <Splash />
+        <EventIndex/>
       </div>
     );
   }
