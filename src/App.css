@@ -2,6 +2,7 @@
   text-align: center;
 }
 
+/*
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
@@ -25,4 +26,43 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+*/
+
+body {
+  margin: 0;
+}
+
+header {
+  background-image: url("./docs/pexels-photo-106400.jpeg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 550px;
+}
+
+header h1 {
+  margin-top: 0;
+  padding-top: 100px;
+  color: rgba(255, 255, 255, 1)
+}
+
+button {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(255, 255, 255, 1);
+  border: 2px solid rgba(0, 0, 0, 0.8);
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+button:hover {
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: 1s;
+}
+
+.event-list, .event-list li {
+  list-style: none;
+  padding: 0;
 }
