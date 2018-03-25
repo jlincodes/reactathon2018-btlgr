@@ -10,7 +10,7 @@ export function handler(event, context, callback) {
               "id",
               "Name",
               "Description",
-              // "image_url"
+              "image_url"
           ],
           "order_by": [
               {
@@ -35,8 +35,8 @@ export function handler(event, context, callback) {
       console.log(response);
 
       response.data.forEach((obj, i) => {
-        retVal[i] = obj
-      })
+        retVal[i] = obj;
+      });
 
       callback(null, {
         statusCode: 200,

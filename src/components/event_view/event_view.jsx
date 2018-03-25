@@ -23,8 +23,11 @@ class EventView extends React.Component {
     if (this.state) {
       const eventName = this.state.Name;
       const eventDesc = this.state.Description;
+      const eventImage = this.state.image_url;
       return (
         <div>
+          <img src={`${eventImage}`}></img>
+
           <h1>{eventName}</h1>
           <div>
             <StreamIndex />
