@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import '@opentok/client'
+import '@opentok/client';
 
 import './index.css';
 import App from './App';
@@ -16,7 +16,7 @@ import {
 } from './config';
 
 // store setup
-let store = configureStore()
+let store = configureStore();
 
 // TokBox credentials setup
 function renderApp(credentials) {
