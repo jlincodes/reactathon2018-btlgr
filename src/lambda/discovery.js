@@ -1,18 +1,24 @@
 import axios from 'axios';
 
 export function handler(event, context, callback) {
+
   let data = {
-    "type": "select",
-    "args": {
-      "table": "Events",
-      "columns": [],
-      "ordered_by": [
-        {
-          "column": "Name",
-          "order": "asc"
-        }
-      ]
-    }
+      "type": "select",
+      "args": {
+          "table": "Events",
+          "columns": [
+              "id",
+              "Name",
+              "Description",
+              // "image_url"
+          ],
+          "order_by": [
+              {
+                  "column": "Name",
+                  "order": "asc"
+              }
+          ]
+      }
   };
 
   let requestOptions = {
@@ -21,14 +27,25 @@ export function handler(event, context, callback) {
       "Content-Type": "application/json"
     }
   };
-  axios.get('https://data.annihilate87.hasura-app.io/v1/query', data, requestOptions)
+
+  axios.post('https://data.annihilate87.hasura-app.io/v1/query', data, requestOptions)
     .then(response => {
+      let retVal = {};
+
+      console.log(response);
+
+      response.data.forEach((obj, i) => {
+        retVal[i] = obj
+      })
+
       callback(null, {
         statusCode: 200,
-        body: JSON.stringify(response)
+        body: JSON.stringify(retVal)
       });
+
     })
     .catch(err => {
+      console.log('*&^%*&^%*&^%*&^%*&^%*&^%*&^%*&^%*&^%*&^%*&^%');
       console.log(err);
     });
 }
