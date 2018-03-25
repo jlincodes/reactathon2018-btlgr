@@ -7,7 +7,7 @@ export default class EventList extends React.Component {
     super(props);
     this.state = {
       loading: false,
-      events: []
+      events: {}
     };
   }
 
@@ -18,19 +18,17 @@ export default class EventList extends React.Component {
       // .then(response => console.log("response", response))
       .then(response => response.json())
       // .then(resp => console.log("events", resp));
-      .then(resp => this.setState({loading: false, events: resp}));
-      // .then(json => this.setState({loading: false, msg: json.msg}));
+      .then(resp => this.setState({ loading: false, events: resp }));
   }
 
   render() {
     let {loading, events} = this.state;
-    events = events.msg ? events.msg : null;
     console.log("events", events);
 
-    let eventItems = events ? events.map( (event, idx) => (
+    let eventItems = events ? Object.keys(events).map( idx => (
       <EventListItem
         key={idx}
-        event={event} />
+        event={events[idx]} />
     )) : <span>Loading Events...</span>;
 
     return (
