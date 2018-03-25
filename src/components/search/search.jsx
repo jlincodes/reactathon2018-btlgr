@@ -32,7 +32,7 @@ export default class Search extends React.Component {
           <span className='search-bar' >
             <input
               className='search-input'
-              placeholder='name yo thang'
+              placeholder='Event name'
               value={this.state.terms}
               onChange={e => this.update(e)}
               />

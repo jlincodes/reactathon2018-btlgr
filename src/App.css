@@ -36,12 +36,17 @@ body {
   margin: 0;
 }
 
-header {
+
+.splash-background {
   background-image: url("./docs/pexels-photo-106400.jpeg");
   background-size: 100%;
+  width: calc(100vw);
   background-repeat: no-repeat;
   height: 550px;
+  /*top: -50px;
+  position: relative;*/
 }
+
 
 header h1 {
   margin-top: 0;
