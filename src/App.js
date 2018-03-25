@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 
 import './App.css';
-<<<<<<< HEAD
 import Stream from './components/stream/stream'
+import EventIndex from './components/events/event_index';
+import Splash from './components/splash/splash';
 
 class LambdaDemo extends Component {
   constructor(props) {
@@ -28,24 +29,15 @@ class LambdaDemo extends Component {
     </p>
   }
 }
-=======
-import EventIndex from './components/events/event_index';
-import Splash from './components/splash/splash';
->>>>>>> ab9c6341bcdf2e8441e49a76a518414dddc39b85
-
-
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-<<<<<<< HEAD
         <LambdaDemo/>
-        <Stream credentials={ this.props.credentials }/>
-=======
+        {/* <Stream credentials={ this.props.credentials }/> */}
         <Splash />
         <EventIndex/>
->>>>>>> ab9c6341bcdf2e8441e49a76a518414dddc39b85
       </div>
     );
   }
