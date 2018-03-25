@@ -11,11 +11,20 @@ export function handler(event, context, callback) {
     .then(resp => {
       console.log(resp.data);
       info = resp.data.events.map(item => {
-        return(
-          {"Name":`${item.name.text}`,
-           "Description":`${item.description.text}`,
-           "image_url":`${item.logo.original.url}`}
-        );
+        if (item.logo.original.url) {
+          return(
+            {"Name":`${item.name.text}`,
+            "Description":`${item.description.text}`,
+            "image_url":`${item.logo.original.url}`}
+          );          
+        } else {
+          return(
+            {"Name":`${item.name.text}`,
+            "Description":`${item.description.text}`,
+            }
+          );
+
+        }
       });
 
       let data = {
