@@ -1,0 +1,8 @@
+.stream-area {
+  display: flex;
+  flex-direction: row;
+}
+
+.StreamIndex {
+  width: 33%;
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import StreamIndex from '../stream/stream_index';
 import Display from '../stream/display';
+import './event_view.css';
 
 class EventView extends React.Component {
   constructor(props) {
@@ -31,7 +32,7 @@ class EventView extends React.Component {
       return (
         <div>
           <h1>{eventName}</h1>
-          <div>
+          <div className="stream-area">
             <StreamIndex />
             <Display
               token={token}
