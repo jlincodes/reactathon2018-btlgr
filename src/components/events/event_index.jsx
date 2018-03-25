@@ -15,7 +15,7 @@ export default class EventList extends React.Component {
   componentDidMount() {
     this.setState({ loading: true, events: [] });
     // fetch('/.netlify/functions/eventbrite')
-      fetch('/.netlify/functions/eventbrite', { method: 'post', body: this.state.extra })
+      fetch('/.netlify/functions/discovery', { method: 'post', body: this.state.extra })
       // .then(response => console.log("response", response))
       .then(response => response.json())
       // .then(resp => console.log("events", resp));
