@@ -12,7 +12,8 @@ class LambdaDemo extends Component {
     e.preventDefault();
 
     this.setState({loading: true});
-    fetch('/.netlify/functions/hello')
+    fetch('/.netlify/functions/eventbrite')
+    // fetch('/.netlify/functions/hello')
       .then(response => response.json())
       .then(json => this.setState({loading: false, msg: json.msg}));
   }
