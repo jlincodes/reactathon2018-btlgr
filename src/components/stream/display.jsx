@@ -1,6 +1,5 @@
 import React from 'react';
-
-
+import Stream from './stream';
 
 class Display extends React.Component {
   constructor(props) {
@@ -9,9 +8,18 @@ class Display extends React.Component {
   }
 
   render() {
+    // console.log(this.props);
+    const credentials = this.props.credentials;
+    const sessionId = this.props.sessionId;
+    const token = this.props.token;
+    
     return (
       <div>
-        Display
+        <Stream
+          sessionId={sessionId}
+          token={token}
+          credentials={this.props.credentials}
+          />
 
       </div>
     );

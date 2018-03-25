@@ -74,7 +74,11 @@ class Stream extends Component {
   };
 
   render() {
-    const { apiKey, sessionId, token } = this.props.credentials;
+    // console.log('props', this.props);
+    // const { apiKey } = this.props.credentials;
+    const apiKey = '46086912';
+    const { sessionId, token } = this.props;
+
     const { error, connection, publishVideo } = this.state;
     return (
       <div>
