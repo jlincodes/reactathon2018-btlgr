@@ -4,15 +4,17 @@ import {
 } from '../actions/event_actions.js';
 import merge from 'lodash/merge';
 
-export const eventsReducer = (state = {}, action) => {
+const eventsReducer = (state = {}, action) => {
   Object.freeze(state);
 
   switch (action.type) {
     case RECEIVE_EVENTS:
-    break;
+      return action.events;
     case RECEIVE_EVENT:
-    break;
+      return merge({}, state, {[action.event.id]: action.event});
     default:
-    break;
+      return state;
   }
 };
+
+export default eventsReducer;
