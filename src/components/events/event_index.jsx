@@ -9,12 +9,10 @@ export default class EventList extends React.Component {
       loading: false,
       events: []
     };
-    this.handleClick = this.handleClick.bind(this);
+    // this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick(e) {
-    e.preventDefault();
-
+  componentDidMount() {
     this.setState({ loading: true, events: [] });
     fetch('/.netlify/functions/eventbrite')
       // .then(response => console.log("response", response))
