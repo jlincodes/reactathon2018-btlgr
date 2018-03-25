@@ -1,17 +1,10 @@
 import React, { Component } from 'react';
-<<<<<<< HEAD
-=======
 import {BrowserRouter as Router, Route} from 'react-router-dom';
-
->>>>>>> 6fa0f0d90313c2918efe71a8362dfa099eb3b6c5
 import './App.css';
 import Stream from './components/stream/stream';
 import EventIndex from './components/events/event_index';
 import Splash from './components/splash/splash';
 import Search from './components/search/search';
-
-<<<<<<< HEAD
-
 import './App.css';
 
 // class LambdaDemo extends Component {
@@ -40,19 +33,7 @@ import './App.css';
 //   }
 // }
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        {/* <Stream credentials={ this.props.credentials }/> */}
-        <Splash />
-        <Search />
-        <EventIndex/>
-      </div>
-    );
-  }
-}
-=======
+
 // {/* <Stream credentials={ this.props.credentials }/> */}
 
 const TestComponent = () => ( <div>Test Component Show Pg</div> );
@@ -60,6 +41,7 @@ const TestComponent = () => ( <div>Test Component Show Pg</div> );
 const Main = () => (
   <div>
     <Splash />
+    <Search />
     <EventIndex />
   </div>
 );
@@ -72,6 +54,5 @@ const App = () => (
     </div>
   </Router>
 );
->>>>>>> 6fa0f0d90313c2918efe71a8362dfa099eb3b6c5
 
 export default App;
