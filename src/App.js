@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './app.css';
+import './App.css';
 import EventIndex from './components/events/event_index';
 import Splash from './components/splash/splash';
 
