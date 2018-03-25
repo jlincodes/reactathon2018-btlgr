@@ -4,7 +4,6 @@ import './event.css';
 
 
 const EventListItem = (props) => {
-  console.log("props", props);
   const eventId = props.event.id;
   const eventName = props.event.Name;
   // const eventDesc = props.event.description.slice(0, 300);

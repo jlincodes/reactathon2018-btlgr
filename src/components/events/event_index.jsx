@@ -23,8 +23,6 @@ export default class EventList extends React.Component {
 
   render() {
     let {loading, events} = this.state;
-    console.log("events", events);
-
     let eventItems = events ? Object.keys(events).map( idx => (
       <EventListItem
         key={idx}
