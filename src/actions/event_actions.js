@@ -1,8 +1,8 @@
-export const RECEIVE_ALL_EVENTS = "RECEIVE_ALL_EVENTS";
+export const RECEIVE_EVENTS = "RECEIVE_EVENTS";
 export const RECEIVE_EVENT = "RECEIVE_EVENT";
 
-export const receiveAllEvents = (events) => ({
-  type: RECEIVE_ALL_EVENTS,
+export const receiveEvents = (events) => ({
+  type: RECEIVE_EVENTS,
   events
 });
 
