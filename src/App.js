@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import './App.css';
+import Stream from './components/stream/stream'
 
 class LambdaDemo extends Component {
   constructor(props) {
@@ -27,11 +28,14 @@ class LambdaDemo extends Component {
   }
 }
 
+
+
 class App extends Component {
   render() {
     return (
       <div className="App">
         <LambdaDemo/>
+        <Stream credentials={ this.props.credentials }/>
       </div>
     );
   }
