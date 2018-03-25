@@ -6,7 +6,7 @@ export function handler(event, context, callback) {
   
   let key = process.env.eventbriteKey ? process.env.eventbriteKey : "I6KMPRJD2RIBTZ23G2LR";
 
-  axios.get(`https://www.eventbriteapi.com/v3/events/search/?token=${key}&start_date.keyword=today&sort_by=best&q=${event.body}`
+  axios.get(`https://www.eventbriteapi.com/v3/events/search/?token=${key}&start_date.keyword=today&sort_by=best&q=${event.body}`)
     .then(resp => {      
       info = resp.data.events.map(item => {
         return(
