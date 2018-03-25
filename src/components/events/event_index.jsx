@@ -7,7 +7,8 @@ export default class EventList extends React.Component {
     super(props);
     this.state = {
       loading: false,
-      events: []
+      events: [],
+      extra: "karaoke"
     };
     this.handleClick = this.handleClick.bind(this);
   }
@@ -16,11 +17,13 @@ export default class EventList extends React.Component {
     e.preventDefault();
 
     this.setState({ loading: true, events: [] });
-    fetch('/.netlify/functions/eventbrite')
+    // fetch('/.netlify/functions/eventbrite')
+      fetch('/.netlify/functions/eventbrite', { method: 'post', body: this.state.extra })
       // .then(response => console.log("response", response))
       .then(response => response.json())
       // .then(resp => console.log("events", resp));
-      .then(resp => this.setState({loading: false, events: resp}));
+      // .then(resp => this.setState({loading: false, events: resp}));
+      .then(json => this.setState({loading: false, msg: json.msg}));
   }
 
   render() {

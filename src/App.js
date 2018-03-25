@@ -1,21 +1,23 @@
 import React, { Component } from 'react';
 import EventIndex from './components/events/event_index';
 import Splash from './components/splash/splash';
+import Search from './components/search/search';
+
 
 import './App.css';
 
 class LambdaDemo extends Component {
   constructor(props) {
     super(props);
-    this.state = {loading: false, msg: null};
+    this.state = {loading: false, msg: null, extra: "EXTRA"};
   }
 
   handleClick = (e) => {
     e.preventDefault();
 
     this.setState({loading: true});
-    fetch('/.netlify/functions/eventbrite')
-    // fetch('/.netlify/functions/hello')
+    // fetch('/.netlify/functions/eventbrite')
+    fetch('/.netlify/functions/hello', { method: 'post', body: this.state.extra })
       .then(response => response.json())
       .then(json => this.setState({loading: false, msg: json.msg}));
   }
@@ -35,6 +37,7 @@ class App extends Component {
     return (
       <div className="App">
         <Splash />
+        <Search />
         <EventIndex/>
       </div>
     );
