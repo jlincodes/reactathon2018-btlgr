@@ -37,8 +37,6 @@ import EventView from './components/event_view/event_view';
 
 // {/* <Stream credentials={ this.props.credentials }/> */}
 
-const TestComponent = () => ( <div>Test Component Show Pg</div> );
-
 const Main = () => (
   <div>
     <Splash />
@@ -51,7 +49,6 @@ const App = () => (
   <Router>
     <div className="App">
       <Route exact path="/" component={Main}/>
-      <Route exact path="/test" component={TestComponent}/>
       <Route exact path="/events/:id" component={EventView}/>
     </div>
   </Router>

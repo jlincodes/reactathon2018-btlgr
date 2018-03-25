@@ -19,16 +19,25 @@ class EventView extends React.Component {
   }
 
   render() {
-    console.log(this.state);
-    if (this.state) {
+    // console.log(this.props);
+    const credentials = this.props.credentials;
+
+    if (this.state && this.state.session_id) {
       const eventName = this.state.Name;
       const eventDesc = this.state.Description;
+      const token = this.state.token;
+      const sessId = this.state.session_id;
+
       return (
         <div>
           <h1>{eventName}</h1>
           <div>
             <StreamIndex />
-            <Display />
+            <Display
+              token={token}
+              sessionId={sessId}
+              credentials={credentials}
+              />
           </div>
           <p>{eventDesc}</p>
         </div>
