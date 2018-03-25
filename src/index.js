@@ -6,7 +6,7 @@ import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-import { configureStore } from './store/store'
+import { configureStore } from './store/store';
 
 import {
   SAMPLE_SERVER_BASE_URL,
@@ -44,5 +44,4 @@ if (API_KEY && TOKEN && SESSION_ID) {
 
 document.addEventListener('DOMContentLoaded', () => {
   registerServiceWorker();
-})
-
+});
