@@ -9,8 +9,8 @@ export function handler(event, context, callback) {
           "columns": [
               "id",
               "Name",
-              "description",
-              "image_url"
+              "Description",
+              // "image_url"
           ],
           "order_by": [
               {
