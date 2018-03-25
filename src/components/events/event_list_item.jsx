@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './event.css';
+
 
 const EventListItem = (props) => {
   const eventId = props.event.id;
@@ -10,7 +12,10 @@ const EventListItem = (props) => {
   // <p>{eventDesc}...</p>
   return (
     <li>
-      <Link to={`events/${eventId}`}><h3>{eventName}</h3></Link>
+      <div className='event-item'>
+        <Link to={`events/${eventId}`}><h3>{eventName}</h3></Link>
+
+      </div>
     </li>
   );
 };

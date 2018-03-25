@@ -30,7 +30,7 @@ export default class EventList extends React.Component {
     )) : <span>Loading Events...</span>;
 
     return (
-      <div>
+      <div className="container_event_list">
         <ul className="event-list">
           {eventItems}
         </ul>
