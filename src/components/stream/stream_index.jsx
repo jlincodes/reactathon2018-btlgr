@@ -1,19 +1,23 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 class StreamIndex extends Component {
   constructor(props){
-    super(props)
+    super(props);
     this.state = {
-      streams = []
-    }
+      streams: []
+    };
   }
 
   render() {
-    let { streams } = this.props
+    let { streams } = this.props;
+    streams = ["dummy data", "dummier data"];
+
     return (
       <div className='StreamIndex'>
         streams
       </div>
-    )
+    );
   }
 }
+
+export default StreamIndex;
