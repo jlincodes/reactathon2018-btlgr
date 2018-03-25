@@ -10,7 +10,9 @@ export function handler(event, context, callback) {
           "columns": [
             "id",
             "Name",
-            "Description"
+            "Description",
+            "token",
+            "session_id"
           ],
           "where": {
             "id": {
