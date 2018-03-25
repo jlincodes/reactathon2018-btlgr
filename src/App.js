@@ -6,6 +6,7 @@ import EventIndex from './components/events/event_index';
 import Splash from './components/splash/splash';
 import Search from './components/search/search';
 import './App.css';
+import EventView from './components/event_view/event_view';
 
 // class LambdaDemo extends Component {
 //   constructor(props) {
@@ -51,6 +52,7 @@ const App = () => (
     <div className="App">
       <Route exact path="/" component={Main}/>
       <Route exact path="/test" component={TestComponent}/>
+      <Route exact path="/events/:id" component={EventView}/>
     </div>
   </Router>
 );
