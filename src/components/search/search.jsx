@@ -1,4 +1,5 @@
 import React from 'react';
+import './search.css';
 
 export default class Search extends React.Component {
   constructor(props) {
@@ -28,7 +29,6 @@ export default class Search extends React.Component {
     return(
       <div className='search-form'>
         <form onSubmit={e => this.handleClick(e)}>
-          <h2>Search Events!</h2><br />
           <span className='search-bar' >
             <input
               className='search-input'
