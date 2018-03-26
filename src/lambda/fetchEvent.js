@@ -12,7 +12,8 @@ export function handler(event, context, callback) {
             "Name",
             "Description",
             "token",
-            "session_id"
+            "session_id",
+            "image_url"
           ],
           "where": {
             "id": {
